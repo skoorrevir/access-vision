@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Vision | Mobile Eye Care in Alabama</title>
     <style>
-        /* --- CSS VARIABLES & RESET --- */
+        /* --- CSS VARIABLES \& RESET --- */
         :root {
-            --primary-blue: #003366;    /* Medical Blue - High Contrast */
-            --accent-teal: #00796B;     /* Calming Teal */
-            --warm-highlight: #FFB74D;  /* Warm Community Tone */
-            --text-dark: #212121;       /* Very Dark Grey for readability */
-            --bg-light: #F4F7F6;        /* Soft White */
+            --primary-blue: #003366;    
+            --accent-teal: #00796B;     
+            --warm-highlight: #FFB74D;  
+            --text-dark: #212121;       
+            --bg-light: #F4F7F6;        
             --white: #ffffff;
             --alert-red: #D32F2F;
             --success-green: #388E3C;
@@ -24,18 +24,7 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
-            font-size: 18px; /* Large font for accessibility */
-        }
-
-        /* --- ACCESSIBILITY UTILITIES --- */
-        .sr-only {
-            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-            overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
-        }
-        
-        a:focus, button:focus {
-            outline: 3px solid var(--warm-highlight);
-            outline-offset: 2px;
+            font-size: 18px; 
         }
 
         /* --- NAVIGATION --- */
@@ -65,7 +54,7 @@
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://via.placeholder.com/1200x600/003366/ffffff?text=Eye+Care+Clinic'); /* Placeholder BG */
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://via.placeholder.com/1200x600/003366/ffffff?text=Eye+Care+Clinic');
             background-size: cover;
             color: var(--white);
             text-align: center;
@@ -84,6 +73,8 @@
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
+            cursor: pointer;
+            border: none;
         }
         .btn:hover { background-color: #FFA726; }
 
@@ -105,7 +96,7 @@
         h2 { color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-teal); display: inline-block; }
 
         /* --- CLINIC LOCATIONS (HOMEPAGE) --- */
-        .clinic-schedule { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .clinic-schedule { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); min-height: 150px; }
         
         .clinic-card {
             border: 2px solid #ddd;
@@ -116,6 +107,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            animation: fadeIn 0.5s ease-in;
         }
         .clinic-info h3 { margin-bottom: 0.5rem; color: var(--primary-blue); }
         .status { padding: 5px 10px; border-radius: 4px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
@@ -168,8 +160,7 @@
             border-radius: 8px;
             margin-bottom: 2rem;
         }
-        .profile-text h3 { color: var(--primary-blue); margin-bottom: 0.5rem; }
-
+        
         /* --- FOOTER --- */
         footer {
             background-color: var(--primary-blue);
@@ -185,6 +176,11 @@
             margin-top: 10px;
             font-size: 0.9rem;
             border-radius: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* --- RESPONSIVE --- */
@@ -227,24 +223,9 @@
 
         <section id="schedule">
             <h2>Upcoming Clinics</h2>
-            <div class="clinic-schedule">
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <h3>Tuscaloosa Community Center</h3>
-                        <p><strong>Date:</strong> October 15, 2025</p>
-                        <p><strong>Time:</strong> 9:00 AM - 4:00 PM</p>
-                    </div>
-                    <div class="status open">Walk-ins Welcome</div>
+            <div id="clinic-container" class="clinic-schedule">
+                <p style="text-align: center; color: #666;">Loading schedule...</p>
                 </div>
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <h3>Birmingham Hope Church</h3>
-                        <p><strong>Date:</strong> October 22, 2025</p>
-                        <p><strong>Time:</strong> 10:00 AM - 3:00 PM</p>
-                    </div>
-                    <div class="status full">Registration Full</div>
-                </div>
-            </div>
         </section>
 
         <section>
@@ -291,16 +272,10 @@
                 <p>Screening for Diabetes, Hypertension, and Glaucoma.</p>
             </div>
         </div>
-
-        <div style="margin-top: 3rem;">
-            <h3>The "Medical Home" Impact</h3>
-            <p>Our eye exams often serve as an entry point into broader healthcare. By detecting ocular signs of serious illnesses like diabetes or leukemia, we help patients connect with primary care for life-saving treatment.</p>
-        </div>
     </section>
 
     <section id="team" style="background-color: white;">
         <h2>Faculty \& Leadership</h2>
-        
         <div class="team-profile">
             <div style="width: 150px; height: 150px; background: #ccc; border-radius: 50%; flex-shrink: 0;"></div>
             <div class="profile-text">
@@ -309,27 +284,62 @@
                 <p>A former practicing optometrist, Dr. Daum conducts all eye examinations as a volunteer, driving the clinical excellence of Access Vision.</p>
             </div>
         </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 2rem;">
-            <div>
-                <h3>Board of Directors</h3>
-                <ul>
-                    <li>Handling strategy, fundraising, and clinic logistics.</li>
-                    <li>Founding Board Members</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Volunteer Team</h3>
-                <p>Our community volunteers are the heartbeat of our operation, assisting with patient intake, flow, and administrative support.</p>
-            </div>
-        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Access Vision. All Rights Reserved.</p>
         <div class="non-profit-badge">501(c)(3) Non-Profit Organization (IRS Determination 2025)</div>
-        <p style="margin-top: 10px; font-size: 0.9rem;">Designed for Accessibility and Community Care.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('clinic-container');
+
+            fetch('schedule.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Clear the "Loading..." message
+                    container.innerHTML = '';
+
+                    data.forEach(clinic => {
+                        // Create Card Container
+                        const card = document.createElement('div');
+                        card.className = 'clinic-card';
+
+                        // Create Info Section
+                        const infoDiv = document.createElement('div');
+                        infoDiv.className = 'clinic-info';
+                        infoDiv.innerHTML = `
+                            <h3>${clinic.location}</h3>
+                            <p><strong>Date:</strong> ${clinic.date}</p>
+                            <p><strong>Time:</strong> ${clinic.time}</p>
+                        `;
+
+                        // Create Status Badge
+                        const statusDiv = document.createElement('div');
+                        // Use 'open' or 'full' classes based on JSON status
+                        const statusClass = clinic.status === 'open' ? 'open' : 'full';
+                        statusDiv.className = `status ${statusClass}`;
+                        statusDiv.textContent = clinic.statusLabel;
+
+                        // Append to Card
+                        card.appendChild(infoDiv);
+                        card.appendChild(statusDiv);
+
+                        // Append to Main Container
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading schedule:', error);
+                    container.innerHTML = '<p style="text-align:center; color:red;">Unable to load schedule. Please try again later.</p>';
+                });
+        });
+    </script>
 </body>
 </html>
