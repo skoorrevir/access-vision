@@ -1,0 +1,23 @@
+[
+  {
+    "location": "Tuscaloosa Community Center",
+    "date": "October 15, 2025",
+    "time": "9:00 AM - 4:00 PM",
+    "status": "open",
+    "statusLabel": "Walk-ins Welcome"
+  },
+  {
+    "location": "Birmingham Hope Church",
+    "date": "October 22, 2025",
+    "time": "10:00 AM - 3:00 PM",
+    "status": "full",
+    "statusLabel": "Registration Full"
+  },
+  {
+    "location": "Huntsville Public Library (Outreach)",
+    "date": "November 05, 2025",
+    "time": "8:30 AM - 2:00 PM",
+    "status": "open",
+    "statusLabel": "Open Slots Available"
+  }
+]
