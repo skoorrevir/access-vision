@@ -3,7 +3,7 @@
 Access vision is a non-profit mobile eye clinic servicing rurual alabama. They need a proffesional looking website to impress funders and service customers.
 ## Deliverable
 ### Task
-Create a proffesional website with 3 sections:
+Create a profesional website with 3 sections:
 #### About us
  - Include information about staff members and mission statement
 #### Upcoming clinics
@@ -28,4 +28,6 @@ A set files in this github repo to be hosted on a web server
 March 14, 2026
 
 # Other
- - Contact River for any questions
+ - Contact River with any questions
+ - look into nginx on docker for local developement. Ask Blake for questions
+ - look into JS frameworks like eleventy
