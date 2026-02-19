@@ -27,6 +27,34 @@ A set files in this github repo to be hosted on a web server
 ### Deadline
 March 14, 2026
 
+
+## Running Locally
+
+You can run this website locally using one of the two methods below.
+
+### Method 1: Direct Launch
+The fastest way to view the site is to simply open the `index.html` file directly in your web browser.
+
+### Method 2: Docker (Production Emulation)
+To more closely mirror the production environment, use Docker.
+
+#### **Prerequisites**
+* **Docker & Docker-compose**
+* **Linux Users:** Refer to the [Official Install Guide](https://docs.docker.com/engine/install/)
+
+#### **Quick Reference Commands**
+
+| Action | Command |
+| :--- | :--- |
+| **Start** the server | `docker-compose up -d` |
+| **Stop** the server | `docker-compose stop` |
+| **View Logs** | `docker-compose logs -f` |
+
+ #### Access
+ In your browser, go to **localhost:8080**
+
+ 
+
 # Other
  - Contact River with any questions
  - look into nginx on docker for local development. Ask Blake for questions
