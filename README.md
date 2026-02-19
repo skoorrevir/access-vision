@@ -1,7 +1,10 @@
 # Project Spec
+
 ## Problem
-Access vision is a non-profit mobile eye clinic servicing rural alabama. They need a professional looking website to impress funders and service customers.
+Access vision is a non-profit mobile eye clinic servicing rural Alabama. They need a professional looking website to impress funders and service customers.
+
 ## Deliverable
+
 ### Task
 Create a professional website with 3 sections:
 #### About us
@@ -15,47 +18,45 @@ Create a professional website with 3 sections:
  - Include organization details, and upcoming clinic locations as well as links to about me and Clinics pages.
  - opt: you can include all about us and clinic information on this page as well
  - this page should primarily service the client with quick clinic locations prioritized
+
 ### Requirements
- - the clinic information needs to be as easily editable as possible. 
-    - Imagine the training process for a semi-tech savvy person editing this
-    - Perhaps a JSON file parsed by the relevant pages
- - The site needs to be hostable by setting a root directory in a web-server tool like nginx 
+ - the clinic information needs to be as easily editable as possible (e.g., JSON file).
+ - The site needs to be hostable as a modern web application.
 
 ### Format
-A set files in this github repo to be hosted on a web server
+A set of files in this github repo to be hosted on a web server
 
 ### Deadline
 March 14, 2026
 
+## Running Locally (Next.js)
 
-## Running Locally
+You can run this website locally using the Next.js development environment. This is the recommended method for development and making changes.
 
-You can run this website locally using one of the two methods below.
+### Prerequisites
+* **Node.js** (v18.0.0 or higher)
+* **pnpm** (Recommended), **npm**, or **yarn**
 
-### Method 1: Direct Launch
-The fastest way to view the site is to simply open the `index.html` file directly in your web browser.
-
-### Method 2: Docker (Production Emulation)
-To more closely mirror the production environment, use Docker.
-
-#### **Prerequisites**
-* **Docker & Docker-compose**
-* **Linux Users:** Refer to the [Official Install Guide](https://docs.docker.com/engine/install/)
-
-#### **Quick Reference Commands**
+### **Quick Reference Commands**
 
 | Action | Command |
 | :--- | :--- |
-| **Start** the server | `docker-compose up -d` |
-| **Stop** the server | `docker-compose stop` |
-| **View Logs** | `docker-compose logs -f` |
+| **Install** dependencies | `pnpm install` |
+| **Start** dev server | `pnpm dev` |
+| **Build** for production | `pnpm build` |
+| **Lint** code | `pnpm lint` |
 
- #### Access
- In your browser, go to **localhost:8080**
+#### Access
+In your browser, go to **localhost:3000**
 
- 
+## Editing Content
+
+The clinic information is stored in a JSON file for easy editing:
+- Location: `src/app/components/schedule.json`
+
+Modify this file to update upcoming clinic locations and details. The site will automatically refresh with the new data during development.
 
 # Other
  - Contact River with any questions
- - look into nginx on docker for local development. Ask Blake for questions
- - look into JS frameworks like eleventy
+ - This project uses Next.js and React.
+ - The site needs to be hostable by setting a root directory in a web-server tool like nginx or via Vercel.
