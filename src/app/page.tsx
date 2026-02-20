@@ -1,18 +1,20 @@
 import ClinicSchedule from "./components/ClinicSchedule";
+import styles from "./page.module.css";
+
 export default function Home() {
   return (
     <main id="home">
       
-      <section className="hero">
+      <section className={styles.hero}>
         <h1>Bringing Comprehensive Eye Care to Alabama Communities</h1>
         <p>Mobile eye clinics providing accessible care to the underserved.</p>
-        <a href="#schedule" className="btn">Find a Clinic Near You</a>
+        <a href="#schedule" className={styles.btn}>Find a Clinic Near You</a>
       </section>
 
-      <div className="quick-info">
-        <div className="info-item"><span>&#10003;</span> Free/Low Cost</div>
-        <div className="info-item"><span>&#128083;</span> Exams \& Glasses</div>
-        <div className="info-item"><span>&#128106;</span> All Ages</div>
+      <div className={styles.quickInfo}>
+        <div className={styles.infoItem}><span>&#10003;</span> Free/Low Cost</div>
+        <div className={styles.infoItem}><span>&#128083;</span> Exams \& Glasses</div>
+        <div className={styles.infoItem}><span>&#128106;</span> All Ages</div>
       </div>
 
       <section id="schedule">
@@ -21,8 +23,8 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="poster-frame">
-          <div className="poster-placeholder">
+        <div className={styles.posterFrame}>
+          <div className={styles.posterPlaceholder}>
             <p><strong>Access Vision Outreach Flyer (PDF)</strong></p>
           </div>
 
@@ -34,7 +36,7 @@ export default function Home() {
 
           <a
             href="/test file download.pdf" // Note: Put this PDF in your 'public' folder!
-            className="btn"
+            className={styles.btn}
             style={{ padding: "10px 20px", fontSize: "1rem", marginTop: "10px" }}
             download
             aria-label="Download Access Vision Outreach Flyer"
@@ -77,19 +79,19 @@ export default function Home() {
         </div>
 
         <h3>Core Services</h3>
-        <div className="services-grid">
-          <div className="service-card">
-            <div className="service-icon">&#128065;</div>
+        <div className={styles.servicesGrid}>
+          <div className={styles.serviceCard}>
+            <div className={styles.serviceIcon}>&#128065;</div>
             <h4>Comprehensive Exams</h4>
             <p>Full medical eye examinations.</p>
           </div>
-          <div className="service-card">
-            <div className="service-icon">&#128083;</div>
+          <div className={styles.serviceCard}>
+            <div className={styles.serviceIcon}>&#128083;</div>
             <h4>Prescription Glasses</h4>
             <p>Provided on-site or ordered for patients.</p>
           </div>
-          <div className="service-card">
-            <div className="service-icon">&#9877;</div>
+          <div className={styles.serviceCard}>
+            <div className={styles.serviceIcon}>&#9877;</div>
             <h4>Disease Detection</h4>
             <p>Screening for Diabetes, Hypertension, and Glaucoma.</p>
           </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from 'next/link';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from "./layout.module.css";
 
 
 const geistSans = Geist({
@@ -27,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header>
-          <div className="nav-container">
-            <a href="#" className="logo">Access Vision</a>
-            <nav>
+        <header className={styles.header}>
+          <div className={styles.navContainer}>
+            <a href="#" className={styles.logo}>Access Vision</a>
+            <nav className={styles.nav}>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#mission">Mission</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/#mission">Mission</a></li>
                 <li><Link href="/team">Team</Link></li>
               </ul>
             </nav>
@@ -44,9 +45,9 @@ export default function RootLayout({
         {/* Where page contents show*/}
         {children}
 
-        <footer>
+        <footer className={styles.footer}>
           <p>&copy; 2025 Access Vision. All Rights Reserved.</p>
-          <div className="non-profit-badge">501(c)(3) Non-Profit Organization (IRS Determination 2025)</div>
+          <div className={styles.nonProfitBadge}>501(c)(3) Non-Profit Organization (IRS Determination 2025)</div>
         </footer>
       </body>
     </html>
