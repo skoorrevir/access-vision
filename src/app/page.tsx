@@ -96,25 +96,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="team" style={{ backgroundColor: "white" }}>
-        <h2>Faculty & Leadership</h2>
-        <div className="team-profile">
-          <div style={{ width: "150px", height: "150px", background: "#ccc", borderRadius: "50%", flexShrink: 0 }}></div>
-          <div className="profile-text">
-            <h3>Dr. Kent Daum</h3>
-            <p><strong>Executive Director & Lead Optometrist</strong></p>
-            <p>
-              Dr. Kent Daum, O.D., Ph.D. is a licensed optometrist and the
-              clinical lead for Access Vision's Mobile Eye Clinic. He conducts
-              all eye examinations as a volunteer...
-              <br /><br />
-              Dr. Daum earned both his Doctor of Optometry and Ph.D. from Ohio
-              State University...
-            </p>
-          </div>
-        </div>
-      </section>
-
     </main>
   );
 }
