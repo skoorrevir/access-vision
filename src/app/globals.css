@@ -239,6 +239,18 @@ h2 {
 	margin-bottom: 2rem;
 }
 
+.team-page-header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+	background: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+}
+
 /* --- FOOTER --- */
 footer {
 	background-color: var(--primary-blue);

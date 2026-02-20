@@ -1,4 +1,4 @@
-import clinics from "./schedule.json";
+import clinics from "./schedule/schedule.json";
 
 export default function ClinicSchedule() {
   return (
