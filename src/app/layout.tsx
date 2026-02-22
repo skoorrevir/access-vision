@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: "--font-inter",
+  subsets:["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
@@ -27,15 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${inter.variable} ${geistSans.variable}`}>
         <header className={styles.header}>
           <div className={styles.navContainer}>
-            <a href="#" className={styles.logo}>Access Vision</a>
+            <Link href="/" className={styles.logo}>Access Vision</Link>
             <nav className={styles.nav}>
               <ul>
                 <li><Link href="/">Home</Link></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/#mission">Mission</a></li>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/#mission">Mission</Link></li>
                 <li><Link href="/team">Team</Link></li>
               </ul>
             </nav>
