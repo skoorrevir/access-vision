@@ -51,10 +51,11 @@ In your browser, go to **localhost:3000**
 
 ## Editing Content
 
-The clinic information is stored in a JSON file for easy editing:
-- Location: `src/app/components/schedule.json`
+The clinic team and schedule information is stored in JSON files for easy editing:
+- Team Location: `src/app/components/team/team.json`
+- Schedule Location: `src/app/components/schedule/schedule.json`
 
-Modify this file to update upcoming clinic locations and details. The site will automatically refresh with the new data during development.
+The site will automatically refresh with the new data during development, and prod will update with a merge to main.
 
 # Other
  - Contact River with any questions
