@@ -1,5 +1,5 @@
 import Image from "next/image";
-import team from "./team/team.json";
+import team from "@/data/team.json";
 import styles from "./ClinicTeam.module.css";
 
 export default function ClinicTeam() {

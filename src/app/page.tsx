@@ -1,4 +1,4 @@
-import ClinicSchedule from "./components/ClinicSchedule";
+import ClinicSchedule from "@/components/ClinicSchedule";
 import styles from "./page.module.css";
 import {CheckCircle, Glasses, Users, Eye, Stethoscope} from 'lucide-react';
 

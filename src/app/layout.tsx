@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
+import ContactWidget from "@/components/ContactWidget";
 
 
 const inter = Inter({
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${geistSans.variable}`}>
         <header className={styles.header}>
           <div className={styles.navContainer}>
@@ -43,8 +44,9 @@ export default function RootLayout({
         </header>
         
         {/* Where page contents show*/}
-        {children}
+        <main>{children}</main>
 
+        <ContactWidget />
         <footer className={styles.footer}>
           <p>&copy; 2025 Access Vision. All Rights Reserved.</p>
           <div className={styles.nonProfitBadge}>501(c)(3) Non-Profit Organization (IRS Determination 2025)</div>
