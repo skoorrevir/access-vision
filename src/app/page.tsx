@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" style={{ backgroundColor: "white" }}>
+      <section id="about" className={styles.about}>
         <h2>About Us</h2>
         <p>
           Access Vision is a nonprofit organization created to address critical
