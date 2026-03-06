@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
+import ContactWidget from "@/components/ContactWidget";
 
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets:["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -26,16 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${geistSans.variable}`}>
         <header className={styles.header}>
           <div className={styles.navContainer}>
-            <a href="#" className={styles.logo}>Access Vision</a>
+            <Link href="/" className={styles.logo}>Access Vision</Link>
             <nav className={styles.nav}>
               <ul>
                 <li><Link href="/">Home</Link></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/#mission">Mission</a></li>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/#mission">Mission</Link></li>
                 <li><Link href="/team">Team</Link></li>
               </ul>
             </nav>
@@ -43,8 +44,9 @@ export default function RootLayout({
         </header>
         
         {/* Where page contents show*/}
-        {children}
+        <main>{children}</main>
 
+        <ContactWidget />
         <footer className={styles.footer}>
           <p>&copy; 2025 Access Vision. All Rights Reserved.</p>
           <div className={styles.nonProfitBadge}>501(c)(3) Non-Profit Organization (IRS Determination 2025)</div>

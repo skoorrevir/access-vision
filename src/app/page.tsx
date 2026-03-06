@@ -1,5 +1,6 @@
-import ClinicSchedule from "./components/ClinicSchedule";
+import ClinicSchedule from "@/components/ClinicSchedule";
 import styles from "./page.module.css";
+import {CheckCircle, Glasses, Users, Eye, Stethoscope} from 'lucide-react';
 
 export default function Home() {
   return (
@@ -12,9 +13,9 @@ export default function Home() {
       </section>
 
       <div className={styles.quickInfo}>
-        <div className={styles.infoItem}><span>&#10003;</span> Free/Low Cost</div>
-        <div className={styles.infoItem}><span>&#128083;</span> Exams \& Glasses</div>
-        <div className={styles.infoItem}><span>&#128106;</span> All Ages</div>
+        <div className={styles.infoItem}><CheckCircle size={20} /> Free/Low Cost</div>
+        <div className={styles.infoItem}><Glasses size={20} /> Exams & Glasses</div>
+        <div className={styles.infoItem}><Users size={20} /> All Ages</div>
       </div>
 
       <section id="schedule">
@@ -46,7 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" style={{ backgroundColor: "white" }}>
+      <section id="about" className={styles.about}>
         <h2>About Us</h2>
         <p>
           Access Vision is a nonprofit organization created to address critical
@@ -81,17 +82,17 @@ export default function Home() {
         <h3>Core Services</h3>
         <div className={styles.servicesGrid}>
           <div className={styles.serviceCard}>
-            <div className={styles.serviceIcon}>&#128065;</div>
+            <div className={styles.serviceIcon}><Eye size={48} /></div>
             <h4>Comprehensive Exams</h4>
             <p>Full medical eye examinations.</p>
           </div>
           <div className={styles.serviceCard}>
-            <div className={styles.serviceIcon}>&#128083;</div>
+            <div className={styles.serviceIcon}><Glasses size={48} /></div>
             <h4>Prescription Glasses</h4>
             <p>Provided on-site or ordered for patients.</p>
           </div>
           <div className={styles.serviceCard}>
-            <div className={styles.serviceIcon}>&#9877;</div>
+            <div className={styles.serviceIcon}><Stethoscope size={48} /></div>
             <h4>Disease Detection</h4>
             <p>Screening for Diabetes, Hypertension, and Glaucoma.</p>
           </div>

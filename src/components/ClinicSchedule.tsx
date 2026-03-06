@@ -1,4 +1,4 @@
-import clinics from "./schedule/schedule.json";
+import clinics from "@/data/schedule.json";
 import styles from "./ClinicSchedule.module.css";
 
 export default function ClinicSchedule() {

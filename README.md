@@ -51,12 +51,13 @@ In your browser, go to **localhost:3000**
 
 ## Editing Content
 
-The clinic information is stored in a JSON file for easy editing:
-- Location: `src/app/components/schedule.json`
+The clinic team and schedule information is stored in JSON files for easy editing:
+- Team Location: `src/data/team.json`
+- Schedule Location: `src/data/schedule.json`
 
-Modify this file to update upcoming clinic locations and details. The site will automatically refresh with the new data during development.
+The site will automatically refresh with the new data during development, and prod will update with a merge to main.
 
 # Other
- - Contact River with any questions
+ - Contact Wyatt (Project Manager) or River with any questions
  - This project uses Next.js and React.
  - The site needs to be hostable by setting a root directory in a web-server tool like nginx or via Vercel.

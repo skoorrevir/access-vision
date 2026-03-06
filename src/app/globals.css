@@ -17,7 +17,7 @@
 }
 
 body {
-	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: var(--font-inter), system-ui, sans-serif;
 	background-color: var(--bg-light);
 	color: var(--text-dark);
 	line-height: 1.6;
@@ -37,4 +37,10 @@ h2 {
 	margin-bottom: 2rem;
 	border-bottom: 2px solid var(--accent-teal);
 	display: inline-block;
+}
+
+h1, h2, h3, h4, .logo {
+	font-family: var(--font-geist-sans), sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.02em;
 }

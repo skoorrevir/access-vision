@@ -1,5 +1,5 @@
-import ClinicTeam from ".././components/ClinicTeam";
-import styles from "../components/ClinicTeam.module.css";
+import ClinicTeam from "@/components/ClinicTeam";
+import styles from "@/components/ClinicTeam.module.css";
 
 export default function TeamPage() {
 
