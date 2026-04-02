@@ -1,0 +1,46 @@
+/* --- CSS VARIABLES \& RESET --- */
+:root {
+	--primary-blue: #003366;
+	--accent-teal: #00796B;
+	--warm-highlight: #FFB74D;
+	--text-dark: #212121;
+	--bg-light: #F4F7F6;
+	--white: #ffffff;
+	--alert-red: #D32F2F;
+	--success-green: #388E3C;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-inter), system-ui, sans-serif;
+	background-color: var(--bg-light);
+	color: var(--text-dark);
+	line-height: 1.6;
+	font-size: 18px;
+}
+
+/* --- SECTIONS COMMON --- */
+section {
+	padding: 4rem 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h2 {
+	color: var(--primary-blue);
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	border-bottom: 2px solid var(--accent-teal);
+	display: inline-block;
+}
+
+h1, h2, h3, h4, .logo {
+	font-family: var(--font-geist-sans), sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}

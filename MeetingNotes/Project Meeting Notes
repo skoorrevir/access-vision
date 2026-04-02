@@ -1,0 +1,24 @@
+Meeting Topics:
+ - General project spec:
+    - For non-profit eye clinic
+    - Needs to be professional and functional
+    - Needs at least 3 pages:
+        - Home page
+            - Website front page
+            - Include details, upcoming clinic locations
+            - Links to other pages
+            - Primarily for the client: includes quick clinics as a main point
+        - About Us
+            - Includes info about staff members and mission statement
+            - Each staff member has own blurb w/ photo and short bio
+        - Upcoming Clinics
+            - Contains full data of upcoming clinics for client reference
+            - Features quick points of contact
+    - Deadline: March 14th
+ - Main Requirements:
+    - Must be as easily editable as possible (JSON or eleventy (JS framework))
+    - Site must be hostable by setting a root directory in a web-server tool like nginx
+ - Delegation:
+    - One dev (preferably) on each page
+    - Each person needs to be consistent with the theme of the site (look to izzy for color palette)
+    - PM (Wyatt) does progress checks biweekly (Mon. and Thu.)

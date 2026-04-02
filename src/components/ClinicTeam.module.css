@@ -1,0 +1,36 @@
+.clinicTeam {
+    /* Styles if needed */
+}
+
+.clinicTeamCard {
+    /* Styles if needed */
+}
+
+.teamProfile {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+	background: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+}
+
+.profileText {
+    /* Styles if needed */
+}
+
+.teamPageHeader {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+	background: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}

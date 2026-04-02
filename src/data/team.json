@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Jim Bob",
+    "picture": "/team/exTeamMember1.jpg",
+    "biography": "He is Jim Bob",
+    "role": "Lead something"
+  },
+  {
+    "name": "Alex Trebeck",
+    "picture": "/team/exTeamMember2.jpg",
+    "biography": "Host of the hit show jeapordy",
+    "role": "Host"
+  }
+]
